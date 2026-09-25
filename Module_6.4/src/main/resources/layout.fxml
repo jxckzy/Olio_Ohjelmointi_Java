@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="500.0" prefWidth="400.0" spacing="10.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="NoteController">
+    <padding>
+        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+    </padding>
+
+    <Label text="Note Title:" />
+    <TextField fx:id="titleField" promptText="Enter title here..." />
+
+    <Label text="Note Content:" />
+    <TextArea fx:id="contentArea" prefHeight="150.0" promptText="Enter your note here..." wrapText="true" />
+
+    <HBox spacing="10.0">
+        <Button onAction="#handleAdd" text="Add Note" />
+        <Button onAction="#handleUpdate" text="Update Selected" />
+        <Button onAction="#handleDelete" text="Delete Selected" />
+    </HBox>
+
+    <Label text="Saved Notes:" />
+    <ListView fx:id="noteListView" prefHeight="200.0" VBox.vgrow="ALWAYS" />
+</VBox>
